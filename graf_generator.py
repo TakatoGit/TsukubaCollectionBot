@@ -46,6 +46,6 @@ def generate_graf(twitter_status, name_text):
     plt.clf()
 
 def generate(twitter_status,name_text):
-    #generate_date(twitter_status, name_text)
+    generate_date(twitter_status, name_text)
     generate_graf(twitter_status, name_text)
 
