@@ -1,7 +1,7 @@
 # つくコレさんBot
 ---
 つくばコレクション2017の候補者のツイッターデータを処理してツイートするBot  
-アカウント [つくこれさん@tc_statistics](https://twitter.com/tc_statistics?s=09)
+アカウント [@tc_statistics](https://twitter.com/tc_statistics?s=09)
 
 ---
 ### ・status
