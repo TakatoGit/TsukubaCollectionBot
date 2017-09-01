@@ -26,13 +26,12 @@ def generate_graf(twitter_status, name_text):
         f = open(date_directory_filename,"r")
         x = []
         y = []
-        i = 0
-        for num in f:
-            a = num.split(',')
+
+        for i,date_and_count in enumerate(f):
+            date_separate_count = date_and_count.split(',')
             x = x + [i]
-            y = y + [a[1]]
-            x_label = x_label + [a[0]]
-            i += 1
+            y = y + [date_separate_count[1]]
+            x_label = x_label + [date_separate_count[0]]
         ax.plot(x, y,'-',label=re.sub('TC_2017|TC2017_','',status))   
     f.close()
 
@@ -47,6 +46,6 @@ def generate_graf(twitter_status, name_text):
     plt.clf()
 
 def generate(twitter_status,name_text):
-    generate_date(twitter_status, name_text)
+    #generate_date(twitter_status, name_text)
     generate_graf(twitter_status, name_text)
 
