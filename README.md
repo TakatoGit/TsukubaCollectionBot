@@ -49,5 +49,5 @@ ACCESS_TOKEN_SECRET = "****************************"
 
 ## Author
 
-[takato](https://github.com/TakatoGit)
+[takato](https://github.com/bam6o0)
 
