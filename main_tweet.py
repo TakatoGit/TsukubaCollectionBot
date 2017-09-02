@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import json, get_date
+import json, get_date, os
 import config
 #import local_config as config
 from requests_oauthlib import OAuth1Session
@@ -15,12 +15,14 @@ def tweet_with_image(twitter, tweet_text, path_list_images):
 
     url_media = "https://upload.twitter.com/1.1/media/upload.json"
     url_text = "https://api.twitter.com/1.1/statuses/update.json"
+    current_directory = os.getcwd()
 
     media_ids = ""
 
     # 画像の枚数分ループ
+    
     for path in path_list_images:
-        files = {"media" : open("./graf/"+path, 'rb')}
+        files = {"media" : open(current_directory+"/graf/"+path, 'rb')}
         req_media = twitter.post(url_media, files = files)
 
         # レスポンスを確認
