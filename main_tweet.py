@@ -27,7 +27,7 @@ def tweet_with_image(twitter, tweet_text, path_list_images):
 
         # レスポンスを確認
         if req_media.status_code != 200:
-            print ("画像アップデート失敗: {}".format(req_media.text))
+            print ("Image update failed: {}".format(req_media.text))
             return -1
 
         media_id = json.loads(req_media.text)['media_id']
@@ -45,9 +45,8 @@ def tweet_with_image(twitter, tweet_text, path_list_images):
 
     # 再びレスポンスを確認
     if req_text.status_code != 200:
-        print ("テキストアップデート失敗: {}".format(req_text.text))
+        print ("Text update failed: {}".format(req_text.text))
         return -1
-
     print ("tweet uploaded\n")
     return 1
 
