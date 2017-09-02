@@ -49,9 +49,16 @@ def tweet_with_image(twitter, tweet_text, path_list_images):
     print ("tweet uploaded\n")
     return 1
 
-twitter = OAuth1Session(CK, CS, AT, ATS)
-tweet_str = ""
-tweet_text =  tweet_str+'\r\n'+"#つくコレ"+'\r\n'+"#つくコレ2017"+'\r\n'+"#統計"
-path_list_images = {'graf_tweets.png','graf_followers.png','graf_favourites.png'}
+def main():
+    twitter = OAuth1Session(CK, CS, AT, ATS)
+    tweet_str = ""
+    tweet_text =  tweet_str + '\r\n' + "#つくコレ" + '\r\n' + "#つくコレ2017" + '\r\n' + "#統計"
+    path_list_images = {
+        'graf_tweets.png',
+        'graf_followers.png',
+        'graf_favourites.png',
+        }
+    tweet_with_image(twitter,tweet_text,path_list_images)
 
-tweet_with_image(twitter,tweet_text,path_list_images)
+if __name__ == '__main__':
+    main()
