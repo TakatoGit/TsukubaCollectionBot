@@ -4,8 +4,6 @@
 
 アカウント [@tc_statistics](https://twitter.com/tc_statistics?s=09)
 
----
-
 ## Description
 
 ### status
