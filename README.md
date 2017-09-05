@@ -26,15 +26,27 @@ graf_generatorの呼び出し
 
 ## Usage
 
-### Set up auth
+1. Set up auth
 
-1. add `config.py`
+ add `config.py`
 
 ```python
 CONSUMER_KEY = "****************************"
 CONSUMER_SECRET = "****************************"
 ACCESS_TOKEN = "****************************"
 ACCESS_TOKEN_SECRET = "****************************"
+```
+
+2. Data update
+
+```python
+python3 get_data.py
+```
+
+3. tweet
+
+```
+python3 main_tweet.py
 ```
 
 ## Contribution
